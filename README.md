@@ -16,7 +16,7 @@ git clone https://github.com/edouardbrasier/HackerNewsES7.git
 
 cd hackernewsES7
 
-nmp install
+npm install
 
 npm link
 
