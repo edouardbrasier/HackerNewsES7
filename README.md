@@ -8,18 +8,20 @@ It is also my first command line tool, it takes a few seconds not because of the
 I only imported request, request-promise in order to get the html body
 I have used vanilla ES7 javascript to scrap the html body
 
-Prerequisite = Node, NPM, Git
+Prerequisites = Node, NPM, Git
 
 How to install?
 
-git clone https://github.com/edouardbrasier/HackerNewsES7.git
+```sh
+$ git clone https://github.com/edouardbrasier/HackerNewsES7.git
+$ cd hackernewsES7
+$ npm install
+$ npm link
+```
 
-cd hackernewsES7
+How to use to get n posts?
 
-npm install
+```sh
+$ hackernews --posts 32
+```
 
-npm link
-
-Use this way
-
- ...HackerNewsES7> hackernews --posts 32
