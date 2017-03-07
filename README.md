@@ -11,10 +11,12 @@ I have used vanilla ES7 javascript to scrap the html body
 Prerequisite = Node, NPM, Git
 
 How to install?
-git clone
+
+git clone https://github.com/edouardbrasier/HackerNewsES7.git
 cd hackernewsES7
 nmp install
 npm link
 
 Use this way
+
  ...HackerNewsES7> hackernews --posts 32
