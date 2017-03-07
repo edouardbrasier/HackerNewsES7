@@ -5,8 +5,7 @@ in order to benefit from new syntax such as asynch/await and avoid callbacks.
 
 It is also my first command line tool, it takes a few seconds not because of the code but because of babel transpiling.
 
-I only imported request, request-promise in order to get the html body
-I have used vanilla ES7 javascript to scrap the html body
+I only imported request, request-promise in order to get the html body, I have used vanilla ES7 javascript to scrap the html body
 
 Prerequisites = Node, NPM, Git
 
