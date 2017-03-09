@@ -7,6 +7,9 @@
       "stage-3",
       "latest"
     ]
+    "plugins": [
+      "transform-regenerator"
+    ]
   },
   "author": "Edouard Brasier",
   "license": "ISC",
