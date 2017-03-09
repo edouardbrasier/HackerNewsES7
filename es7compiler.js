@@ -1,2 +1,5 @@
-import app from './main.js';
+#!/usr/bin/env node
+require('babel-register');
+require('babel-polyfill');
+const app = require('./main.js');
 app();
