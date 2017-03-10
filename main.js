@@ -1,12 +1,12 @@
 #! /usr/bin/env node
 import request from 'request-promise'
 //parameters url and number of posts to scrap per page
-let url = "https://news.ycombinator.com/news?p="
-let MaxPostsPerPage = 30
+const url = "https://news.ycombinator.com/news?p="
+const MaxPostsPerPage = 30
 //recover users arguments
-let userArgs = process.argv.slice(2)
-let command = userArgs[0]
-let NbrPosts = Number(userArgs[1])
+const userArgs = process.argv.slice(2)
+const command = userArgs[0]
+const NbrPosts = Number(userArgs[1])
 let Title=[], Uri=[], Author=[], Points=[], Comments=[], Rank=[], nbpost
 module.exports = function () {
   //check if command is valid and if the number of posts is a positive integer <= 100
@@ -15,7 +15,7 @@ module.exports = function () {
     console.log(error)
   } else {
     //Base on the number of posts we can calculate the number of pages to scrap (if modulo exist then round it up to add one page)
-    let Nbr_pages= (NbrPosts-NbrPosts % MaxPostsPerPage)/MaxPostsPerPage+Math.ceil((NbrPosts % MaxPostsPerPage)/NbrPosts)
+    const Nbr_pages= (NbrPosts-NbrPosts % MaxPostsPerPage)/MaxPostsPerPage+Math.ceil((NbrPosts % MaxPostsPerPage)/NbrPosts)
     async function main() {
       //loop the required number of pages and get their html body
       for (let i = 1; i <= Nbr_pages; i++) {
@@ -107,6 +107,6 @@ function isURL(str) {
   '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
   '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
   '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
-  '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
-  return pattern.test(str);
+  '(\\#[-a-z\\d_]*)?$','i') // fragment locator
+  return pattern.test(str)
 }
